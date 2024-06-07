@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body style="background-color:#36393e;">
+  <div class="bg-sky-400 border-solid rounded-sm">
+     <h1 class="text-center text-2xl">
+        truth or dare?
+     </h1>
+  </div>
+
+<div class="shadow-lg shadow-black hover:bg-slate-800 bg-slate-900 text-white border-solid border-black border-2 rounded-md my-3 ml-20 mr-20 p-10 text-center">
+    <p id="de">&nbsp;</p>
+    <button class="shadow-lg shadow-indigo-500/40 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex ml-auto mr-auto mt-5"  id="button">Press</button>
+  </div>
+  <form action="index.html">
+    <input type="submit"  e="button" class="shadow-lg shadow-indigo-500/40 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex ml-auto mr-auto" value="home"/>
+  </form>
+
+  <script>
+function rndEl(){
+    return questions[~~(rnd()*questions.length)];
+}
+function rndTx(){
+    var tx = rndEl();
+    var txt = document.createTextNode(tx);
+    var sp = document.createElement('span');
+    sp.appendChild(txt);
+    de.innerHTML = '';
+    de.appendChild(sp)
+}
+rnd = Math.random;
+questions = ['nawy 3 shweny jastay hawbshakat ble ka balatawa zor wruzhernar/sarnj rakesha',
+ 'nawy 3 style y sex krdn ble ka la dahatwa hazakai lagal hawbashakat taqy kaitawa',
+'hazakay la shawa sex bkai yan bayani',
+'hazakai la ch shweneka sex bkay?',
+'ta esta daway rasmi rut le krawa?',
+'3 wsha ble ka pey horny aby',
+'hazakay haw bashakat la katy sex chonbe',
+'aya seri rasmi haw bashakat krduau xuy nheny bkai?',
+'nawy 3 shweni jastat ble ka agar hawbashakat dasty leba horny aby?',
+'nawy goranyak ble ka hazakai la katy sexa bixaita sari',
+'hazakai to bo hawbashakaty bkai yan au bot bka?',
+'bihena bar chawt 3 hallbzhardnt haya, yan salli jarek sex bkai yan hamu rozhek kamyan?',
+'hazakai kasek sert bka la katy sexa yan to seri kasek bkai?',
+'agar kuri aya gawray sni hawbashakat badlla? agar kchi aya gauray hini hawbashakat badla?',
+'aya ta esa wa xot dar xstwa ka tawaw bubety balam la rastya tawaw nabubety?',
+'katek hawbashakat la cameraya xuy nheni aka hastt ajule?',
+'aya 7azakai haw bashakat bbini la katy sexa lagal kaseki tr?'];
+de = document.getElementById('de');
+document.getElementById("button").addEventListener('click',rndTx,false);
+</script>
+</body>
+</html>
